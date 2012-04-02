@@ -13,9 +13,11 @@ While other sites do an excellent job of capturing and discussing latest trends,
 
 ## Getting Started
 
-There's some reading up on the [wiki](https://github.com/Code52/saywat/wiki).
+The [wiki](https://github.com/Code52/saywat/wiki) has some details about getting started and fleshing out the application.
 
 The Code52 JabbR [chatroom](http://jabbr.net/#/rooms/code52) is usually the hub of activity if you have questions or would like to discuss things.
+
+The [task board](https://trello.com/board/saywat/4f7974869bf90505711b92f8) has a number of tasks which can be started.
 
 ## Why?
 
