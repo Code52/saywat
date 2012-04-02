@@ -11,6 +11,12 @@ Ever had a conversation with someone where they mention a word or phrase that ju
 **saywat** is intended to help capture and share the idiosyncracies of various cultures so that others can follow conversations quickly.
 While other sites do an excellent job of capturing and discussing latest trends, saywat is interested in the fundamentals and words and phrases in common use.
 
+## Getting Started
+
+There's some reading up on the [wiki](https://github.com/Code52/saywat/wiki).
+
+The Code52 JabbR [chatroom](http://jabbr.net/#/rooms/code52) is usually the hub of activity if you have questions or would like to discuss things.
+
 ## Why?
 
 Several reasons:
@@ -25,8 +31,3 @@ Several reasons:
 
 **arvo** (noun, Australia): abbreviation for *afternoon*. Example: "will you be around this arvo?"
 
-## Getting Started
-
-Details are up on the [wiki](https://github.com/Code52/saywat/wiki/Getting-Started).
-
-The Code52 JabbR [chatroom](http://jabbr.net/#/rooms/code52) is usually the hub of activity if you have questions or would like to discuss things.
