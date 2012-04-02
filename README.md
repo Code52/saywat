@@ -25,28 +25,8 @@ Several reasons:
 
 **arvo** (noun, Australia): abbreviation for *afternoon*. Example: "will you be around this arvo?"
 
-## Workflow
+## Getting Started
 
-This is how the site could be used:
+Details are up on the [wiki](https://github.com/Code52/saywat/wiki/Getting-Started).
 
- - User spots a new word or phrase.
- - User adds request for understanding on site and lodges a question about it on the site. Provides some additional details - how it was used, the possible culture associated with it - to help provide context.
- - notification sent out (Twitter account?) so that users can follow new requests.
- - another user responds to the request
- - answer and question are captured for posterity
-
-## What's next?
-
-Read up on the site structure [here](/site).
-
-I'll be mocking up some stuff and fleshing out this idea further over the next day or two. If you've got suggestions or feedback, ping me on [twitter](@shiftkey).
-
-Alternatively, I help organise the [Code52](http://code52.org) gang - we have a JabbR [chatroom](http://jabbr.net/#/rooms/code52) if you want to hang out and discuss things in real-time.
-
-<br />
-
-Cheers,
-
-Brendan Forster (@shiftkey)
-
-
+The Code52 JabbR [chatroom](http://jabbr.net/#/rooms/code52) is usually the hub of activity if you have questions or would like to discuss things.
