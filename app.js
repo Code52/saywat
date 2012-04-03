@@ -4,9 +4,19 @@
  */
 
 var express = require('express')
+  , less = require('less')
   ;
 
 var app = module.exports = express.createServer();
+
+// Hack connect.js to allow relative @import statements in less.js'
+express.compiler.compilers.less.compile = function (str, fn) {
+  try {
+    less.render(str, {paths: [__dirname + '/public/stylesheets/bootstrap']}, fn);
+  } catch (err) {
+    fn(err);
+  }
+};
 
 // Configuration
 
@@ -16,6 +26,7 @@ app.configure(function () {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
+  app.use(express.compiler({ src: __dirname + '/public', enable: ['less']}));
   app.use(express.static(__dirname + '/public'));
 });
 
