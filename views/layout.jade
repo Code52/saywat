@@ -4,4 +4,14 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap/responsive.css')
-  body!= body
+  body
+    div.container-fluid
+      != body
+      div.navbar.navbar-fixed-bottom
+        div.navbar-inner
+          div.container
+            ul.nav
+              li
+                a(href="/about") About
+    script(type='text/javascript', src='/scripts/jquery-1.7.2.min.js')
+    script(type='text/javascript', src='/scripts/bootstrap.min.js')
