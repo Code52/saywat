@@ -4,6 +4,8 @@
 
 *A simple service to help jump those cultural barriers.*
 
+Build status: ![](https://secure.travis-ci.org/LuaDist/etree.png?branch=master)
+
 ## About
 
 Ever had a conversation with someone where they mention a word or phrase that just doesn't make sense? This is the site for you.
