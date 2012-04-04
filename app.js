@@ -43,5 +43,12 @@ app.configure('production', function () {
 app.get('/', require('./routes/index.js'));
 app.get('/about', require('./routes/about.js'));
 
-app.listen(3000);
+
+if (process.env.C9_PORT) // cloud9 support
+  app.listen(process.env.C9_PORT, "0.0.0.0");
+else if (process.env.PORT) // heroku support
+  app.listen(process.env.PORT);
+else // dev
+  app.listen(3000);
+
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
