@@ -1,0 +1,56 @@
+.shell {
+	max-width: 800px;
+
+}
+
+div.span12 h1 {
+	font-family: 'Cabin Condensed', sans-serif;
+	font-size: 10em;
+	line-height: 150px;
+	text-align: right;
+	margin-bottom: 30px;
+}
+
+div.span12 h2 {
+	font-family: 'Cabin Condensed', sans-serif;
+	font-size: 3em;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+div.search input[type=text] {
+	font-size: 3em;
+	width: 100%;
+	height: 36px;
+    font-family: Arial, Sans-Serif;
+    margin-bottom: 5px;
+    display: block;
+    padding: 4px;
+    border: solid 2px black;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+div.search  input[type="text"]:focus {
+    background-image: none;
+    background-color: #EDF2F7;
+    border: solid 2px black;
+}
+
+div.search input[type=submit] {
+	font-size: 2.5em;
+	width: 100%;
+	height: 48px;
+	font-family: 'Cabin Condensed', sans-serif;
+    border: solid 2px black;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+div.search  input[type="submit"]:focus {
+    background-image: none;
+    background-color: white;
+    border: solid 2px black;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
