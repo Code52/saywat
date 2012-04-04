@@ -1,15 +1,20 @@
 div.row-fluid
-  div.span-12
+  div.span12
     h1 say wat?
-    h2 what does "{word}" mean?
+    h2 what does "arvo" mean?
 
-    p use it in a sentence
+div.row-fluid
+  div.span12.input
+    h3 use it in a sentence
     div.useInSentence
-      input(name='useInSentence')
+      input(type='text', name='useInSentence')
 
-    p can you guess the country of origin?
+div.row-fluid
+  div.span12.input
+    h3 can you guess the country of origin?
     div.countryOfOrigin
-      input(name='countryOfOrigin')
+      input(type='text', name='countryOfOrigin')
 
-    div.go
+div.row-fluid
+  div.span12.go
       input.btn(type='submit', value='go')
