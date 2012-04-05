@@ -10,10 +10,12 @@ var express = require('express')
   , port = process.env.C9_PORT || process.env.PORT || 3000  // Cloud9 || Heroku || localhost
   , address = process.env.C9_PORT ? "0.0.0.0" : undefined   // Cloud9 || everything else
   , mongoUrl = process.env.MONGOLAB_URI || "mongodb://localhost/saywat"
+  , sessionSecret = process.env.SESSION_SECRET || "kjhsdKJH897qweyBJHBq234huidsfjkh34sdf13ASD" // Set a deployment var on Heroku to override this
   ;
 
 var app = module.exports = express.createServer();
 mongoose.connect(mongoUrl);
+require('./data/config.js');
 
 // Hack connect.js to allow relative @import statements in less.js'
 express.compiler.compilers.less.compile = function (str, fn) {
@@ -30,7 +32,7 @@ app.configure(function () {
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.cookieParser());
-  app.use(express.session({ secret : 'kjhsdKJH897qweyBJHBq234huidsfjkh34sdf13ASD', maxAge: new Date(Date.now() + 3600000), store: new MongoSession({ url: mongoUrl }) }));
+  app.use(express.session({ secret : sessionSecret, maxAge: new Date(Date.now() + 3600000), store: new MongoSession({ url: mongoUrl }) }));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
