@@ -5,6 +5,8 @@
 
 var express = require('express')
   , less = require('less')
+  , port = process.env.C9_PORT || process.env.PORT || 3000  // Cloud9 || Heroku || localhost
+  , address = process.env.C9_PORT ? "0.0.0.0" : undefined   // Cloud9 || everything else
   ;
 
 var app = module.exports = express.createServer();
@@ -44,12 +46,6 @@ app.get('/', require('./routes/index.js'));
 app.get('/about', require('./routes/about.js'));
 app.get('/ask', require('./routes/ask.js'));
 
-
-if (process.env.C9_PORT) // cloud9 support
-  app.listen(process.env.C9_PORT, "0.0.0.0");
-else if (process.env.PORT) // heroku support
-  app.listen(process.env.PORT);
-else // dev
-  app.listen(3000);
+app.listen(port, address);
 
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
