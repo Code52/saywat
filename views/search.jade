@@ -10,7 +10,7 @@ each wat in results
       p!= wat._user.displayName
     div.span8
       p Phrase:
-        a(href='') #{wat.phrase}
+        a(href='/wat/' + wat._id) #{wat.phrase}
       p Region:
         #{wat.region}
 
