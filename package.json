@@ -6,6 +6,8 @@
       "express": "2.5.8"
     , "jade": ">= 0.0.1"
     , "less": "1.3.0"
+    , "mongoose": "2.5.13"
+    , "connect-mongo": "0.1.7"
   }, "devDependencies": {
       "jshint": "*"
   }
