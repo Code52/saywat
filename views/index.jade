@@ -5,7 +5,8 @@ div.row-fluid
 
 div.row-fluid
   div.search
-    div.span8
-      input(type='text', name='q')
-    div.span3
-      input.btn(type='submit', value='help!')
+    form(method='POST', action='/search')
+      div.span8
+        input(type='text', name='q')
+      div.span3
+        input.btn(type='submit', value='help!')

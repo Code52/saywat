@@ -1,0 +1,16 @@
+div.row-fluid
+  div.span12
+    h1 say wat?
+    h2 #{query}?
+
+each wat in results
+  div.row-fluid
+    div.span2
+      img(src=wat._user.gravatarUrl)
+      p!= wat._user.displayName
+    div.span8
+      p Phrase:
+        a(href='') #{wat.phrase}
+      p Region:
+        #{wat.region}
+

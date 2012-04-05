@@ -19,7 +19,7 @@ Answer = new Schema({
 
 Wat = mongoose.model('Wat', new Schema({
     _user: { type: ObjectId, ref: 'User', required: true }
-  , phrase: { type: String, trim: true, required: true }
+  , phrase: { type: String, trim: true, required: true, index: true }
   , posted: { type: Date, default: Date.now }
   , region: String
   , answers: [Answer]
