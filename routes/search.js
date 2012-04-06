@@ -11,7 +11,7 @@ module.exports = function (req, res) {
     .populate('_user')
     .run(function (err, results) {
       if (err) { return res.redirect('/error'); }
-      if (results.length === 0) { return res.redirect(url.format({ pathname: '/create', query: { phrase: req.query.q } })); }
+      if (results.length === 0) { return res.redirect(url.format({ pathname: '/ask', query: { phrase: req.query.q } })); }
       
       if (req.accepts('json')) { return res.json(results); }
       res.render('search', { title: 'say wat?', results: results, query: req.query.q });
