@@ -1,13 +1,16 @@
 div.row-fluid
   div.span12
     h1 say wat?
-    h2 what does "arvo" mean?
+    if phrase
+      h2 what does "#{phrase}" mean?
+    else
+      h2 got a word you don't understand?
 
 div.row-fluid
   div.span12.input
     h3 use it in a sentence
     div.useInSentence
-      input(type='text', name='useInSentence')
+      input(type='text', name='useInSentence', value=phrase)
 
 div.row-fluid
   div.span12.input
