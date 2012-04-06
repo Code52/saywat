@@ -7,8 +7,8 @@ var ignore = [
   'node_modules',
   'utils',
   'test',
-  'public/scripts/bootstrap.min.js',
-  'public/scripts/jquery-1.7.2.min.js'
+  '*\\bootstrap.min.js',
+  '*\\jquery-1.7.2.min.js'
 ];
 
 jshint.hint(files, config(), undefined, ignore);
