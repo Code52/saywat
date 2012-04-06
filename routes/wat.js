@@ -13,6 +13,7 @@ module.exports = function (req, res) {
       if (err) { return res.redirect('/error'); }
       if (!wat) { return res.redirect('/'); }
 
+      if (req.accepts('json')) { return res.json(wat); }
       res.render('wat', { title: 'say wat?', id: req.params.id, wat: wat });
     });
 };

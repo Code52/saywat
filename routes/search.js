@@ -4,14 +4,16 @@ var mongoose = require('mongoose')
   ;
 
 module.exports = function (req, res) {
-  if (!req.body.q || req.body.q.length === 0) { return res.redirect('/'); }
+  if (!req.query.q || req.query.q.length === 0) { return res.redirect('/'); }
 
   Wat
-    .find({ phrase: req.body.q })
+    .find({ phrase: req.query.q })
     .populate('_user')
     .run(function (err, results) {
       if (err) { return res.redirect('/error'); }
-      if (results.length === 0) { return res.redirect(url.format({ pathname: '/create', query: { phrase: req.body.q } })); }
-      res.render('search', { title: 'say wat?', results: results, query: req.body.q });
+      if (results.length === 0) { return res.redirect(url.format({ pathname: '/create', query: { phrase: req.query.q } })); }
+      
+      if (req.accepts('json')) { return res.json(results); }
+      res.render('search', { title: 'say wat?', results: results, query: req.query.q });
     });
 };

@@ -56,7 +56,7 @@ app.get('/ask', require('./routes/ask.js'));
 app.get('/create', require('./routes/create.js'));
 app.get('/wat/:id', require('./routes/wat.js'));
 
-app.post('/search', require('./routes/search.js'));
+app.get('/search', require('./routes/search.js'));
 
 app.listen(port, address);
 
