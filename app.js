@@ -9,7 +9,7 @@ var express = require('express')
   , MongoSession = require('connect-mongo')
   , port = process.env.C9_PORT || process.env.PORT || 3000  // Cloud9 || Heroku || localhost
   , address = process.env.C9_PORT ? "0.0.0.0" : undefined   // Cloud9 || everything else
-  , mongoUrl = process.env.MONGOLAB_URI || "mongodb://localhost/saywat"
+  , mongoUrl = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || "mongodb://localhost/saywat"
   , sessionSecret = process.env.SESSION_SECRET || "kjhsdKJH897qweyBJHBq234huidsfjkh34sdf13ASD" // Set a deployment var on Heroku to override this
   ;
 
