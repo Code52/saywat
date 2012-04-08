@@ -1,0 +1,22 @@
+extends layout
+
+block append footer
+  script(type='text/javascript', src='/scripts/typeaheadajax.js')  
+  script(type='text/javascript')
+    $(document).ready(function() {
+      $('#typeahead').typeaheadAjax({ 
+        source: function (typeahead, query) {
+          return $.ajax({
+            type: "GET",
+            url: '/searchpartial', 
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: { q: query }, 
+            success: function (data) {
+              return typeahead.process(data);
+            }
+          });
+        },
+        property: "phrase"
+      });
+    });  

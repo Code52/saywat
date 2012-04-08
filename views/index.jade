@@ -7,24 +7,6 @@ div.row-fluid
   div.search
     form(method='GET', action='/search')
       div.span8
-        input#q(type='text', name='q')
+        input#typeahead(type='text', name='q')
       div.span3
         input.btn(type='submit', value='help!')
-script(type='text/javascript')
-  $(document).ready(function() {
-    $('#q').typeaheadAjax({ 
-      source: function (typeahead, query) {
-        return $.ajax({
-          type: "GET",
-          url: '/searchpartial', 
-          contentType: "application/json; charset=utf-8",
-          dataType: "json",
-          data: { q: query }, 
-          success: function (data) {
-            return typeahead.process(data);
-          }
-        });
-      },
-      property: "phrase"
-    });
-  });  
