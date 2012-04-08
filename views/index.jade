@@ -16,7 +16,7 @@ script(type='text/javascript')
       source: function (typeahead, query) {
         return $.ajax({
           type: "GET",
-          url: '/search', 
+          url: '/searchpartial', 
           contentType: "application/json; charset=utf-8",
           dataType: "json",
           data: { q: query }, 
@@ -24,6 +24,7 @@ script(type='text/javascript')
             return typeahead.process(data);
           }
         });
-      }
+      },
+      property: "phrase"
     });
   });  
