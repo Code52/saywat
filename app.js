@@ -53,8 +53,8 @@ app.configure('production', function () {
 app.get('/', require('./routes/index.js'));
 app.get('/about', require('./routes/about.js'));
 app.get('/ask', require('./routes/ask.js'));
+app.post('/ask', require('./routes/create.js'));
 app.get('/wat/:id', require('./routes/wat.js'));
-
 app.get('/search', require('./routes/search.js'));
 
 app.listen(port, address);
