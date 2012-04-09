@@ -4,12 +4,17 @@
   , "private": true
   , "dependencies": {
       "express": "2.5.8"
-    , "jade": ">= 0.0.1"
+    , "jade": "0.22.1"
     , "less": "1.3.0"
     , "mongoose": "2.5.13"
     , "connect-mongo": "0.1.7"
     , "flow": "0.2.2"
   }, "devDependencies": {
-      "jshint": "*"
+      "jshint": "0.6.0"
+    , "mocha": "1.0.1"
+    , "request": "2.9.200"
+  }, "scripts": {
+      "start": "node app.js"
+    , "test": "node_modules\\.bin\\mocha"
   }
 }
