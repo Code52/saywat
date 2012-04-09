@@ -12,6 +12,9 @@ describe('GET /index', function() {
   });
 
   it('should set the title', function () {
-    assert.ok(body);
+    // This is an awful way to do the test.
+    // Having a lot of trouble finding a good html/dom parser that 
+    // works on windows though
+    assert.ok(body.indexOf('<title>say wat?</title>') !== -1);
   })
 });
