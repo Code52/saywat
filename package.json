@@ -11,5 +11,7 @@
     , "flow": "0.2.2"
   }, "devDependencies": {
       "jshint": "*"
+  }, "scripts": {
+    "start": "node app.js"
   }
 }
