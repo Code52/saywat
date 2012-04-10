@@ -42,9 +42,10 @@ routes = function (app) {
           example: req.body.example
         });
 
-        newWat.save();
-
-        res.render('index', { title: 'say wat?' });
+        newWat.save(this);
+      }, function (err, wat) {
+        if (err || !wat) { return res.redirect('/ask'); }
+        res.redirect('/wat/' + wat._id);
       });
   });
 };
