@@ -63,6 +63,7 @@ app.get('/about', require('./routes/about.js'));
 app.get('/ask', require('./routes/ask.js'));
 app.get('/wat/:id', require('./routes/wat.js'));
 app.get('/search', require('./routes/search.js'));
+app.get('/searchpartial', require('./routes/searchpartial.js'));
 
 // Start server
 

@@ -4,11 +4,12 @@ var files = [
   './'
 ];
 var ignore = [
-  'node_modules',
-  'utils',
-  'test',
-  '*\\bootstrap.min.js',
-  '*\\jquery-1.7.2.min.js'
+    'node_modules'
+  , 'utils'
+  , 'test'
+  , '*\\bootstrap.min.js'
+  , '*\\jquery-1.7.2.min.js'
+  , '*\\typeaheadajax.js'
 ];
 
 jshint.hint(files, config(), undefined, ignore);

@@ -7,9 +7,7 @@ module.exports = function (req, res) {
   if (!req.query.q || req.query.q.length === 0) { return res.redirect('/'); }
 
   Wat
-    .find({ phrase: req.query.q })
-    .populate('_user')
-    .run(function (err, results) {
+    .$where('this.phrase.indexOf("' + req.query.q + '") != -1').exec(function (err, results) {
       if (err) { return res.redirect('/error'); }
       if (req.accepts('json')) { return res.json(results); }
       if (results.length === 0) { return res.redirect(url.format({ pathname: '/ask', query: { phrase: req.query.q } })); }
