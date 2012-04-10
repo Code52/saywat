@@ -22,6 +22,7 @@ Wat = mongoose.model('Wat', new Schema({
   , phrase: { type: String, trim: true, required: true, index: true }
   , posted: { type: Date, default: Date.now }
   , region: String
+  , example: String
   , answers: [Answer]
   }));
 
@@ -52,6 +53,7 @@ User.count({}, function (err, count) {
           _user: chris._id
         , phrase: 'arvo'
         , region: 'Australia'
+        , example: 'What\'re you up to this arvo?'
         });
       wat1.answers.push({ _user: paul._id, content: 'Afternoon fool!' });
       wat1.save(this);
@@ -61,6 +63,7 @@ User.count({}, function (err, count) {
           _user: chris._id
         , phrase: 'sheila'
         , region: 'Australia'
+        , example: 'Bonza sheila, that one!'
         });
       wat2.answers.push({ _user: paul._id, content: 'That\'s a lady!' });
       wat2.save();

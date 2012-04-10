@@ -6,18 +6,28 @@ div.row-fluid
     else
       h2 got a word you don't understand?
 
-div.row-fluid
-  div.span12.input
-    h3 use it in a sentence
-    div.useInSentence
-      input(type='text', name='useInSentence', value=phrase)
+form(method='POST', action='/ask')
+  if phrase
+    input(type='hidden', name='phrase', value=phrase)
+  else
+    div.row-fluid
+      div.span12.input
+        h3 wat's the word?
+        div.phrase
+          input(type='text', name='phrase')
+  
+  div.row-fluid
+    div.span12.input
+      h3 use it in a sentence
+      div.useInSentence
+        input(type='text', name='example', value=phrase)
 
-div.row-fluid
-  div.span12.input
-    h3 can you guess the country of origin?
-    div.countryOfOrigin
-      input(type='text', name='countryOfOrigin')
+  div.row-fluid
+    div.span12.input
+      h3 can you guess the country of origin?
+      div.countryOfOrigin
+        input(type='text', name='region')
 
-div.row-fluid
-  div.span12.go
-      input.btn(type='submit', value='go')
+  div.row-fluid
+    div.span12.go
+        input.btn(type='submit', value='go')

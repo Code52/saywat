@@ -26,7 +26,7 @@ input[type=text] {
      margin-left: 20px;
 }
 
-div.search input[type=text], div.useInSentence input[type=text], div.countryOfOrigin input[type=text]  {
+div.search input[type=text], div.useInSentence input[type=text], div.countryOfOrigin input[type=text], div.phrase input[type=text]  {
 	width: 100%;
 	font-family: Arial, Sans-Serif;
     margin-bottom: 5px;
