@@ -58,13 +58,11 @@ require('./data/config.js');
 
 // Routes
 
-app.get('/', require('./routes/index.js'));
-app.get('/about', require('./routes/about.js'));
-app.get('/ask', require('./routes/ask.js'));
-app.post('/ask', require('./routes/create.js'));
-app.get('/wat/:id', require('./routes/wat.js'));
-app.get('/search', require('./routes/search.js'));
-app.get('/searchpartial', require('./routes/searchpartial.js'));
+require('./routes/index.js')(app);
+require('./routes/about.js')(app);
+require('./routes/ask.js')(app);
+require('./routes/wat.js')(app);
+require('./routes/search.js')(app);
 
 // Start server
 
