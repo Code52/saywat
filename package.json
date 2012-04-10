@@ -15,6 +15,5 @@
     , "request": "2.9.200"
   }, "scripts": {
       "start": "node app.js"
-    , "test": "node_modules\\.bin\\mocha"
   }
 }
