@@ -1,15 +1,15 @@
 div.row-fluid
   div.span12
     h1 say wat?
-    h2 #{query}?
+    h2 wat's "#{query}"?
 
 each wat in results
   div.row-fluid
-    div.span2
-      img(src=wat._user.gravatarUrl)
-      p!= wat._user.displayName
-    div.span8
-      p Phrase:
+    div.span2.userbox
+      img.portrait(src=wat._user.gravatarUrl)
+      p.nickname!= wat._user.displayName
+    div.span8.questionbox
+      p Phrase: 
         a(href='/wat/' + wat._id) #{wat.phrase}
       p Example:
         #{wat.example}

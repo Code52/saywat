@@ -62,8 +62,7 @@ div.search  input[type="text"]:focus, div.useInSentence  input[type="text"]:focu
 
 div.search input[type=submit], div.go input[type=submit] {
 	font-size: 2.5em;
-	width: 100%;
-	height: 48px;
+	width: auto;
 	font-family: 'Cabin Condensed', sans-serif;
     border: solid 2px black;
     -webkit-border-radius: 0px;
@@ -96,3 +95,42 @@ div.useInSentence, div.countryOfOrigin {
     margin-right: -40px;
   }
 }
+
+/* ================================== */
+h2 {padding-bottom: 0.5em;}
+
+.span12 .answertitle {
+	margin: 1em;
+}
+.span2.userbox {
+	border: #000000 0.3em solid;
+	border-radius: 1em;
+	margin-top: 2.5em;
+}
+.portrait {
+	border: #000000 0.2em dashed;
+	/* margin: 1em 0.5em 0 0.5em; */
+	margin: -1em 0.5em 0 -1em;
+	border-radius: 0.5em;
+}
+.nickname {
+	font-size: 1.2em;
+	margin: 0.5em;
+}
+
+.span8 h2 {
+	font-size: 1.8em;
+	margin: 0 0.5em;
+}
+.span8 p {
+	font-size: 1.5em;
+	margin: 0.5em;
+}
+.span8.questionbox {
+	background: #EEEEEE;
+	border: #000000 0.3em solid;
+	border-radius: 1em;
+	padding: 0;
+	margin-left: -1.5em;
+}
+/* ================================== */

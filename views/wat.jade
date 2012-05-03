@@ -3,22 +3,21 @@ div.row-fluid
     h1 say wat?
 
 div.row-fluid
-  div.span2
-    p #{wat._user.displayName}
-    p
-      img(src=wat._user.gravatarUrl)
-  div.span8
+  div.span2.userbox
+    img.portrait(src=wat._user.gravatarUrl)
+    p.nickname!= wat._user.displayName
+  div.span8.questionbox
     h2 #{wat.phrase}
     p #{wat.region}
 
 div.row-fluid
   div.span12
-    h2 wat can it mean?
+    h2.answertitle wat can it mean?
 each answer in wat.answers
   div.row-fluid
-    div.span2
+    div.span2.userbox
       img(src=answer._user.gravatarUrl)
-      p!= answer._user.displayName
-    div.span8
+      p.nickname!= answer._user.displayName
+    div.span8.questionbox
       p #{answer.content}
 
