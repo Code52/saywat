@@ -38,20 +38,22 @@ div.search input[type=text], div.useInSentence input[type=text], div.countryOfOr
 }
 
 div.useInSentence input[type=text], div.countryOfOrigin input[type=text]  {
-    font-size: 18px;
-    height: 24px;
+    font-size: 0.6em;
+	height: 1.2em;
     width: 100%;
     margin-bottom: 5px;
     display: block;
     padding: 4px;
     border: solid 2px black;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
 }
 
 div.search input[type=text]{
-    font-size: 3em;
-    height: 36px;
+    font-size: 2em;
+    height: 1.6em;
+	-webkit-border-radius: 1em;
+    border-radius: 1em;
 }
 
 div.search  input[type="text"]:focus, div.useInSentence  input[type="text"]:focus, div.countryOfOrigin  input[type="text"]:focus {
@@ -65,13 +67,13 @@ div.search input[type=submit], div.go input[type=submit] {
 	width: auto;
 	font-family: 'Cabin Condensed', sans-serif;
     border: solid 2px black;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
 }
 
 div.go input[type=submit] {
     margin-right: -30px;
-    width: 200px;
+    width: 5em;
     float: right;
 }
 
@@ -79,8 +81,8 @@ div.search  input[type="submit"]:focus, div.go  input[type="submit"]:focus {
     background-image: none;
     background-color: white;
     border: solid 2px black;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
 }
 
 div.useInSentence, div.countryOfOrigin { 
@@ -97,6 +99,10 @@ div.useInSentence, div.countryOfOrigin {
 }
 
 /* ================================== */
+.search .searchbutton input[type=submit] {
+	margin-left: -1em;
+}
+
 h2 {padding-bottom: 0.5em;}
 
 .span12 .answertitle {
@@ -109,7 +115,6 @@ h2 {padding-bottom: 0.5em;}
 }
 .portrait {
 	border: #000000 0.2em dashed;
-	/* margin: 1em 0.5em 0 0.5em; */
 	margin: -1em 0.5em 0 -1em;
 	border-radius: 0.5em;
 }
